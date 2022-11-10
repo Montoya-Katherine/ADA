@@ -82,13 +82,33 @@ public class main {
                     System.out.println("La persona de menor edad es " + edad1);
                 } else {
                     System.out.println("La persona de menor edad es " + edad3);
-                    ;
+
                 }
             } else if (edad2 < edad3) {
                 System.out.println("La persona de menor edad es "  + edad2);
             } else {
                 System.out.println("La persona de menor edad es " +  edad3);
             }*/
+//------------6
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese costo del producto: ");
+        double precio = scanner.nextInt();
+        double costoTotal;
+        int descuento;
 
+        if (precio > 100){
+           if (precio >= 200){
+               descuento = 15;
+               costoTotal = precio - (precio * 0.15);
+           }else {
+               descuento = 12;
+               costoTotal = precio - ( precio * 0.12);
+           }
+        }else {
+            descuento = 10;
+            costoTotal = precio - ( precio * 0.10);
+        }
+
+        System.out.println( "Total: " + costoTotal  +", con un descuento de: " + descuento +"%");
     }
 }
